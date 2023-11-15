@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat</title>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+		{{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > --}}
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/styleIndex.css">
+		
+	</head>
+	<body>
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">
+				
+				<div class="col-md-4 col-xl-3 col-lg-3 chat">
+				<div class="card mb-sm-3 mb-md-0 contacts_card">
+					<div class="p-3 chat-header">
+						<div class="d-flex">
+							{{#if user}}
+								<div class="w-100 d-flex pl-0" >
+									<input type="hidden" value="{{user._id}}" id="current">
+									<img class="rounded-circle user_img" src="images/{{user.avatar}}" id="currenAvt">
+									<h5 style="color: aliceblue;" class="user_info" id="currentUser">{{user.username}}</h5>
+
+								</div>
+
+								<div class="flex-shrink-0" style="    margin-top: 10px;">
+									<!-- Example single danger button -->
+									<span id="action_menu_btn" class="dropdown_user"><i class="fas fa-ellipsis-v"></i></span>
+									<div class="action_menu" id="action_menu_user">
+										<ul>
+											<a style="color: aliceblue;" href="/profile"><li><i class="fas fa-user-circle"></i> Profile</li></a>
+											<li id="logout" onclick="logout()"><i class="fas fa-users"></i> Logout</li>
+										</ul>
+									</div>
+								</div>
+							{{/if}}
+						</div>
+					</div>
+					<div class="card-header">
+
+						{{!-- <div class="input-group">
+							<input type="text" placeholder="Search..." name="" class="form-control search">
+							<div class="input-group-prepend">
+								<span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+								<i></i>
+							</div>
+						</div> --}}
+					</div>
+					<div class="card-body contacts_body">
+						
+						<ui class="contacts" id="listOnline">
+								
+						</ui>
+					</div>
+					
+					<div class="card-footer"></div>
+				</div>
+			</div>
+				<div class="col-md-8 col-xl-6 col-lg-6 chat" style="display:none" id="detailMess">
+					<input type="hidden" id="userContact">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="images/avt2.jpg" class="rounded-circle user_img" id="contactAvt">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span id="nameUserContact"></span>
+									<p id="numberMessenger"></p>
+								</div>
+								
+							</div>
+							<span id="action_menu_btn" class="action_menu_chat"><i class="fas fa-ellipsis-v"></i></span>
+							<div class="action_menu" id="action_menu_chat">
+								<ul>
+									<a style="color:white" id="profile"><li><i class="fas fa-user-circle"></i> View profile</li></a>
+									<li onclick="closeDetail()"><i class="fas fa-user-circle"></i> Close</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="card-body msg_card_body" id="display">
+							
+						</div>
+						<div class="card-footer">
+							<div class="input-group">
+								<div class="input-group-append">
+									<span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+								</div>
+								<textarea name="" class="form-control type_msg" placeholder="Type your message..." id="content" onkeyup="texting()"></textarea>
+								<div class="input-group-append" onclick="send()">
+									<span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/scripts.js"></script>
+	<script src="javascripts/main.js"></script>
+	</body>
+</html>
+

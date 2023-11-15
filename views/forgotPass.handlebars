@@ -1,0 +1,50 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="stylesheets/styleForgot.css" />
+    <title>Forgot password</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <input id="register_toggle" type="checkbox" />
+      <div class="slider">
+        <form class="form form--login" id="formlogin">
+          <span class="title">Forgot Password</span>
+          <div class="form_control">
+            <input type="password" name="oldPass" class="input email-login" id="old" placeholder="Old password" required/>
+            <label class="label">Password</label>
+          </div>   
+          <div class="form_control">
+            <input type="password" name="newPass" class="input email-login" id="new" placeholder="New password" required/>
+            <label class="label">New Password</label>
+          </div>
+          <div class="form_control">
+            <input type="password" name="confirm" class="input email-login" id="confirm" placeholder="Confirm new password" required/>
+            <label class="label">Confirm Password</label>
+          </div>
+          <a href="/profile"> Back to profile!</a>
+          <div class="container-error container-error__signup" id="error"></div>
+          <button type="button" class="input-submit input-submit__signup" name="signUp" onclick="changePass()">
+            Change Pass
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="/javascripts/info.js"></script>
+  </body>
+
+
+
+</html>

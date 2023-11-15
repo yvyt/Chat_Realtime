@@ -1,0 +1,46 @@
+[{
+    "_id": {
+        "$oid": "64493704020928ef5c295c1c"
+    },
+    "username": "Vy Vy",
+    "email": "vytuong2903@gmail.com",
+    "password": "$2b$12$lRRBLaPi3.xao9iPIZ0V2eTy5WV5.FXqS2qo/4kF3ivdrBjrN2Uoi",
+    "avatar": "Open Peeps - Avatar.png",
+    "online": false
+}, {
+    "_id": {
+        "$oid": "64493b978bfbd5a8b3fb5c79"
+    },
+    "username": "abc",
+    "email": "abc@gmail.com",
+    "password": "$2b$12$lKcLgDpeeVtO8GdQHjMjteZzG18uHkvg8jKYw/jyp.75tvaIe67/W",
+    "avatar": "avt2.jpg",
+    "online": false
+}, {
+    "_id": {
+        "$oid": "64493fa39963de0d2f012d5f"
+    },
+    "username": "allian",
+    "email": "allian@gmail.com",
+    "password": "$2b$12$2HEYhlifV5ebT8vn/jWcKegEZB/KbvEqF/7W0Tl4UVG0UFWYAjixC",
+    "avatar": "avt3.jpg",
+    "online": false
+}, {
+    "_id": {
+        "$oid": "644bc3ed2282fca0569e9658"
+    },
+    "username": "tuongvy",
+    "email": "vy2903@gmail.com",
+    "password": "$2b$12$4tkKbLfeK37J1jTxivHrOOhNybEr1.V9kWXM9z1Q5x8PcG1CVv9wu",
+    "avatar": "avt2.jpg",
+    "online": false
+}, {
+    "_id": {
+        "$oid": "644bc5072282fca0569e966b"
+    },
+    "username": "vytuong",
+    "email": "vyy2903@gmail.com",
+    "password": "$2b$12$JXjfFpdRWhKNEIaPX9ymBuaEocF2sHCpXyPkJqpjouLqyseQrFY8u",
+    "avatar": "Open Peeps - Avatar.png",
+    "online": false
+}]
